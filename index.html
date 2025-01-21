@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <title>Arbeittech</title>
+  <style>
+body { 
+            transition: background-color 0.3s, color 0.3s; 
+        }
+
+       
+
+
+
+    .offcanvas.show {
+      z-index: 100000;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 120px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      z-index: 1;
+      border-radius: 7px;
+      overflow: hidden;
+      margin-left: 17px;
+    }
+
+    .dropdown-content_2 {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 120px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      z-index: 1;
+      border-radius: 7px;
+      overflow: hidden;
+      margin-left: 0px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropdown-content_2 {
+      display: block;
+    }
+
+    .dropdown_opt {
+      padding: 10px;
+      border-bottom: 1px solid rgb(228, 227, 227);
+    }
+
+    .dropdown_opt:hover {
+      background-color: rgb(245, 245, 245);
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      height: 8px;
+      width: 8px;
+      margin-top: -5px;
+    }
+
+    .bxs-grid {
+      font-size: 30px;
+      margin-top: 7px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">
+        <img src="./assets/logoarbeitttech.png" class="logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <i class="fas fa-bars"></i>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/services.html">Service</a>
+          </li>
+          <div class="search_container">
+            <div class="search_container_left">
+              <i class="mdi mdi-magnify"></i>
+            </div>
+            <div class="search_container_right">
+              <input type="text" placeholder="Search Services near you" />
+            </div>
+          </div>
+          <!-- <i class="fas fa-bars" type="button" ></i> -->
+          <i class='bx bxs-grid' data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"></i>
+
+        </ul>
+        <div class="d-flex">
+          <div class="dropdown">
+            <button class="signin_btn mx-md-3">
+              Join as a pro </button>
+            <div class="dropdown-content">
+              <div class="dropdown_opt">
+                Log In
+              </div>
+              <div class="dropdown_opt">
+                Sign Up
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav   mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <div class="dropdown">
+              <span class="   ">
+                Join as a pro </span>
+              <div class="dropdown-content_2">
+                <div class="dropdown_opt">
+                  Log In
+                </div>
+                <div class="dropdown_opt">
+                  Sign Up
+                </div>
+              </div>
+            </div>
+          </li>
+
+
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="top_padding"></div>
+  <div class="container">
+    <div class="header">
+      <div class="header_container">
+        <div class="header_search_box">
+          <div class="location_search_box">
+            <div class="Search_bar">
+              <div class="location_search_box_left">
+                <input type="text" placeholder="Search Location here" />
+              </div>
+              <div class="location_search_box_right">
+                <i class="mdi mdi-map-marker location"></i>
+              </div>
+              <button class="set_location_btn">Set Location</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/newbanner1.png" class="banner_service_img" />
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <div class="image_card">
+          <img src="./assets/banner1.png" />
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <div class="image_card">
+          <img src="./assets/banner2.png" />
+        </div>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter_left">
+        <h4>All Categories</h4>
+      </div>
+      <div class="filter_right">
+        <a href="/services.html">
+          <h6>See All</h6>
+        </a>
+      </div>
+    </div>
+    <div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="shifting"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/truckbutton.png" style="height: 45px;" /> Shifting </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="plumbing"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/bathtabnew.png" /> Plumbing </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="painting"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/home.png" /> Painting & <br /> Renovation </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="cleaning"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"> <span class="custom-checkbox-container">
+                    <img src="./assets/vaccum.png" /> House Cleaning </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="gadgetRepair"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"> <span class="custom-checkbox-container">
+                    <img src="./assets/pcbutton.png" /> Gadget Repair </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="emergency"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/ambulance.png" /> Emergency </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="carService"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/machanicbutton.png" /> Car Service </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="applianceRepair"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"> <span class="custom-checkbox-container">
+                    <img src="./assets/appliance.png" /> Appliance Repair </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="shifting"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/truckbutton.png" style="height: 45px;" /> Shifting </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="plumbing"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/bathtabnew.png" /> Plumbing </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="painting"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/home.png" /> Painting & <br /> Renovation </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="cleaning"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"> <span class="custom-checkbox-container">
+                    <img src="./assets/vaccum.png" /> House Cleaning </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="gadgetRepair"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"> <span class="custom-checkbox-container">
+                    <img src="./assets/pcbutton.png" /> Gadget Repair </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="emergency"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/ambulance.png" /> Emergency </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="carService"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"><span class="custom-checkbox-container">
+                    <img src="./assets/machanicbutton.png" /> Car Service </span></a>
+              </label>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div>
+              <label style="display: block">
+                <input type="checkbox" class="custom-checkbox" name="serviceType" value="applianceRepair"
+                  onchange="logCheckboxValue(this)" />
+                <a href="categori.html" style="all: unset;"> <span class="custom-checkbox-container">
+                    <img src="./assets/appliance.png" /> Appliance Repair </span></a>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+     
+    </div>
+    <div class="sub_categories_section">
+      <h4>Sub Categories</h4>
+      <div class="row">
+        <div class="col-md-4 col-sm-12">
+          <div class="sub_categories_card">
+            <div class="sub_categories_card_left">
+              <img src="./assets/bachelor.png" />
+            </div>
+            <div class="sub_categories_card_right">
+              <h5>Bachelor Shifting</h5>
+              <p> We are well equipped and well prepared with experts to offer </p>
+              <a href="./services.html">
+                <p class="service_count">0 Services</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="sub_categories_card">
+            <div class="sub_categories_card_left">
+              <img src="./assets/bachelor.png" />
+            </div>
+            <div class="sub_categories_card_right">
+              <h5>Bachelor Shifting</h5>
+              <p> We are well equipped and well prepared with experts to offer </p>
+              <p class="service_count">0 Services</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="sub_categories_card">
+            <div class="sub_categories_card_left">
+              <img src="./assets/bachelor.png" />
+            </div>
+            <div class="sub_categories_card_right">
+              <h5>Bachelor Shifting</h5>
+              <p> We are well equipped and well prepared with experts to offer </p>
+              <p class="service_count">0 Services</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-sm-12">
+        <h5 class="recomended_heading">Recommended Services For You</h5>
+        <a href="/info.html">
+          <div class="recommended_card">
+            <div class="recommended_card_left">
+              <span class="recommended_card_discount"> 100$ OFF </span>
+              <img src="./assets/disint.png" />
+            </div>
+            <div class="recommended_card_right">
+              <h5>Car Interior Cleaning</h5>
+              <div class="rating">
+                <ul class="rating_ul">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <p> We are well equipped and well...</p>
+              <div class="recommended_card_pricing">
+                <div class="recommended_card_pricing_left">
+                  <p class="starts_from">Starts From</p>
+                </div>
+                <div class="recommended_card_pricing_right">
+                  <p class="cut p">
+                    <del>3,000.00$</del>
+                  </p>
+                  <p class="price p">2,900.00$</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <div class="recommended_card">
+          <div class="recommended_card_left">
+            <img src="./assets/bachelor.png" />
+          </div>
+          <div class="recommended_card_right">
+            <h5>Car Interior Cleaning</h5>
+            <div class="rating">
+              <ul class="rating_ul">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <p> We are well equipped and well ... </p>
+            <div class="recommended_card_pricing">
+              <div class="recommended_card_pricing_left">
+                <p class="starts_from">Starts From</p>
+              </div>
+              <div class="recommended_card_pricing_right">
+                <p class="cut p">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price p">2,900.00$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recommended_card">
+          <div class="recommended_card_left">
+            <img src="./assets/disint.png" />
+          </div>
+          <div class="recommended_card_right">
+            <h5>Car Interior Cleaning</h5>
+            <div class="rating">
+              <ul class="rating_ul">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+            <p> We are well equipped and well... </p>
+            <div class="recommended_card_pricing">
+              <div class="recommended_card_pricing_left">
+                <p class="starts_from">Starts From</p>
+              </div>
+              <div class="recommended_card_pricing_right">
+                <p class="cut p">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price p">2,900.00$</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="/services.html">
+          <h6 style="text-align: center;">See All</h6>
+        </a>
+      </div>
+      <div class="col-md-8 col-sm-12">
+        <div class="filter">
+          <div class="filter_left">
+            <h4>Popular Services</h4>
+          </div>
+          <div class="filter_right">
+            <a href="/services.html">
+              <h6>See All</h6>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+
+            <div class="card">
+              <a href="/info.html">
+                <div class="card_top">
+                  <span class="Discount">
+                    <span>100$ OFF</span>
+                  </span>
+                  <img src="./assets/sofacleaning.png" />
+                  <p>Sofa Cleaning</p>
+                </div>
+              </a>
+              <div class="card_bottom">
+                <p class="starts_from">Starts From</p>
+                <p class="cut">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price">2,900.00$</p>
+                <p class="plus" type="button" data-mdb-modal-init data-mdb-target="#exampleModal"> + </p>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card_top">
+                <img src="./assets/sofacleaning.png" />
+                <p>Sofa Cleaning</p>
+              </div>
+              <div class="card_bottom">
+                <p class="starts_from">Starts From</p>
+                <p class="cut">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price">2,900.00$</p>
+                <p class="plus">+</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card_top">
+                <img src="./assets/sofacleaning.png" />
+                <p>Sofa Cleaning</p>
+              </div>
+              <div class="card_bottom">
+                <p class="starts_from">Starts From</p>
+                <p class="cut">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price">2,900.00$</p>
+                <p class="plus">+</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card_top">
+                <img src="./assets/sofacleaning.png" />
+                <p>Sofa Cleaning</p>
+              </div>
+              <div class="card_bottom">
+                <p class="starts_from">Starts From</p>
+                <p class="cut">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price">2,900.00$</p>
+                <p class="plus">+</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card_top">
+                <img src="./assets/sofacleaning.png" />
+                <p>Sofa Cleaning</p>
+              </div>
+              <div class="card_bottom">
+                <p class="starts_from">Starts From</p>
+                <p class="cut">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price">2,900.00$</p>
+                <p class="plus">+</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card_top">
+                <img src="./assets/sofacleaning.png" />
+                <p>Sofa Cleaning</p>
+              </div>
+              <div class="card_bottom">
+                <p class="starts_from">Starts From</p>
+                <p class="cut">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price">2,900.00$</p>
+                <p class="plus">+</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card_top">
+                <img src="./assets/sofacleaning.png" />
+                <p>Sofa Cleaning</p>
+              </div>
+              <div class="card_bottom">
+                <p class="starts_from">Starts From</p>
+                <p class="cut">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price">2,900.00$</p>
+                <p class="plus">+</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card">
+              <div class="card_top">
+                <img src="./assets/sofacleaning.png" />
+                <p>Sofa Cleaning</p>
+              </div>
+              <div class="card_bottom">
+                <p class="starts_from">Starts From</p>
+                <p class="cut">
+                  <del>3,000.00$</del>
+                </p>
+                <p class="price">2,900.00$</p>
+                <p class="plus">+</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="mobile_section">
+      <div>
+        <h3>Easiest, Fastest & Trustworthy Place to get services</h3>
+        <div class="row  ">
+          <div class="col-md-5 col-sm-12">
+            <div class="arbi_app_col">
+              <img src="/assets/arbi-mobile.png" />
+            </div>
+          </div>
+          <div class="col-md-7 col-sm-12">
+            <div class="app_text_col">
+              <h5>Select Your Location</h5>
+              <p>Choose the location where you want to take the service from. It helps to see service providers around
+                your preferred location with the best ratings. </p>
+              <h5> Pick your service and set schedule</h5>
+              <p> Choose the service you need from the category section. Then choose the best suitable time for you to
+                get your service.</p>
+              <h5>Place your booking request and enjoy </h5>
+              <p>After that, place your booking request by clicking on the 'Confirm' button and enjoy the best service
+                in town.</p>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home_slider">
+    <div class="container">
+      <swiper-container class="mySwiper" navigation="true" pagination="true" pagination-type="fraction">
+        <swiper-slide>
+          <div class="slider_card">
+            <div class="slider_card_left">
+              <h3>Happy Customers , Happy Stories</h3>
+              <p><i>Arbeittech services are very helpful for working women like me. They were on time as per the
+                  schedule to provide the service.</i></p>
+              <p><b>- Elizabeth</b></p>
+            </div>
+            <div class="slider_card_right">
+              <img src="/assets/app-slider3.png" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+
+          <div class="slider_card">
+            <div class="slider_card_left">
+              <h3>Happy Customers , Happy Stories</h3>
+              <p><i>Thank you! That was very helpful! The Service men were very professionals & very caution about
+                  safety</i></p>
+              <p><b>- Naomi Scott</b></p>
+            </div>
+            <div class="slider_card_right">
+              <img src="/assets/app-slider2.png" />
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+
+          <div class="slider_card">
+            <div class="slider_card_left">
+              <h3>Happy Customers , Happy Stories</h3>
+              <p><i>Excellent at serving customers, doing a great job</i></p>
+              <p><b>- Anthony</b></p>
+            </div>
+            <div class="slider_card_right">
+              <img src="/assets/slider-person.png" />
+            </div>
+          </div>
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+  <div class="container">
+    <div class="mobile_section">
+      <div>
+        <div class="row  ">
+          <div class="col-md-6 col-sm-12">
+            <div class="arbi_app_col">
+              <img src="/assets/second_app_sec.png" style="width: 70%;" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="app_text_col col-sm-12">
+              <h5>------ Downloads Ours Apps</h5>
+              <span>Download user app & provider app from google play store & app store.</span>
+              <img src="/assets/google_apple.png" />
+            </div>
+          </div>
+
+          </div?>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cta_section">
+    <div class="container">
+      <div>
+        <div class="row">
+          <div class="col-md-6 col-sm-12">
+            <div class="cta_left">
+              <h5>Contact us Any time, We are 24/7 Available</h5>
+              <div class="cta_btn_container">
+                <button class="chat_btn">
+                  <i class="fas fa-comment-alt"> </i>
+                  Chat
+                </button>
+                <button class="phone_btn">
+                  <i class="fas fa-phone"></i>
+                  +80111000000111
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <div class="cta_right">
+              <img src="/assets/arbittech_girl.png" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal_head">
+            <img src="./assets/sofacleaning.png" />
+            <h4>Sofa Cleaning</h4>
+            <p>2 Variations available</p>
+          </div>
+          <div class="modal_container">
+            <div class="container_card">
+              <div class="container_card_left">
+                <p style="color: black">Full sofa cleaning service</p>
+                <p class="price">299.00$</p>
+              </div>
+              <div class="container_card_right">
+                <button id="decrementBtn" class="counter_btn" onclick="decrement()"> - </button>
+                <p id="counter" class="counter_value">0</p>
+                <button id="incrementBtn" class="counter_btn" onclick="increment()"> + </button>
+              </div>
+            </div>
+            <div class="container_card">
+              <div class="container_card_left">
+                <p style="color: black">Full sofa cleaning service</p>
+                <p class="price">299.00$</p>
+              </div>
+              <div class="container_card_right">
+                <button id="decrementBtn" class="counter_btn" onclick="decrement()"> - </button>
+                <p id="counter" class="counter_value">0</p>
+                <button id="incrementBtn" class="counter_btn" onclick="increment()"> + </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <!-- <button
+              type="button"
+              class="btn btn-secondary"
+              data-mdb-ripple-init
+              data-mdb-dismiss="modal"
+            >
+              Close
+            </button> -->
+          <div class="btn_container">
+            <button class="provider_btn" type="button" data-mdb-ripple-init data-mdb-modal-init
+              data-mdb-target="#exampleModal1">
+              <img src="./assets/provider.png" />
+            </button>
+            <button type="button" class="add_to_cart" data-mdb-ripple-init data-mdb-dismiss="modal"> Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" style="border-radius: 25px !important">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel1"></h5>
+          <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="modal_head">
+            <img src="./assets/providermodal.png" class="providerimg" />
+            <h4>Available Providers</h4>
+            <p>3 Variations available</p>
+          </div>
+          <div class="modal_container">
+            <div class="provider_div">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./assets/providermodal.png" class="providerimg" />
+                </div>
+                <div class="col-10">
+                  <h5>Let Arbeittech choose for you</h5>
+                </div>
+              </div>
+            </div>
+            <div class="providers_card_new" id="myDiv" onclick="toggleRadioButton('radioButton1')">
+              <div class="row">
+                <div class="col-2">
+                  <img src="./assets/providermodal.png" class="providerimg" />
+                </div>
+                <div class="col-9" style="display: flex; flex-direction: column">
+                  <h5>Ellison Cardenas</h5>
+                  <div class="rating">
+                    <ul class="rating_ul">
+                      <li></li>
+                    </ul>
+                    <span style="margin-top: 4px; margin-left: 5px">4.75</span>
+                  </div>
+                </div>
+                <div class="col-1">
+                  <input type="radio" id="radioButton1" name="myRadioGroup" class="radioButton" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="confirm_btn" data-mdb-ripple-init data-mdb-dismiss="modal">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h2>Arbeitech</h2>
+          <p class="text-justify">ArbeitTech, a versatile service provider, caters to a diverse range of essential
+            needs, offering a comprehensive array of services such as plumbing, carpentry, electrical assistance, car
+            repair, and more. With a commitment to excellence, ArbeitTech has positioned itself as a reliable solution
+            for individuals seeking skilled professionals in various trades.</p>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Categories</h6>
+          <ul class="footer-links">
+            <li>
+              <a href="http://scanfcode.com/category/c-language/">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="http://scanfcode.com/category/front-end-development/">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="http://scanfcode.com/category/back-end-development/">About US</a>
+            </li>
+            <li>
+              <a href="http://scanfcode.com/category/java-programming-language/">Contact US</a>
+            </li>
+            <li>
+              <a href="http://scanfcode.com/sitemap/">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <h6>Quick Links</h6>
+          <ul class="footer-links">
+            <li>
+              <a href="http://scanfcode.com/about/">About Us</a>
+            </li>
+            <li>
+              <a href="http://scanfcode.com/contact/">Contact Us</a>
+            </li>
+            <li>
+              <a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a>
+            </li>
+            <li>
+              <a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by <a href="#">Arbeittech</a>. </p>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li>
+              <a class="facebook" href="#">
+                <i class="fab fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a class="twitter" href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a class="dribbble" href="#">
+                <i class="fab fa-dribbble"></i>
+              </a>
+            </li>
+            <li>
+              <a class="linkedin" href="#">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+    style="max-width: 300px;">
+    <div class="offcanvas-header">
+      <h5 id="offcanvasRightLabel">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+        style="display: none;"></button>
+    </div>
+    <div class="offcanvas-body">
+
+      <div class="row my-3">
+        <div class="col-3">
+          <div class="modal_icon_box">
+            <img src="./assets/profile_icon.png" />
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="modal_text_col">
+            <p>Profile</p>
+          </div>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-3">
+          <div class="modal_icon_box">
+            <img src="./assets/inbox.png" />
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="modal_text_col">
+            <p>Inbox</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row my-3">
+        <div class="col-3">
+          <div class="modal_icon_box">
+            <img src="./assets/language.png" />
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="modal_text_col">
+            <p>Language</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row my-3">
+        <div class="col-3">
+          <div class="modal_icon_box">
+            <img src="./assets/settings.png" />
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="modal_text_col">
+            <p>Setting</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row my-3">
+        <div class="col-3">
+          <div class="modal_icon_box">
+            <img src="./assets/track.png" />
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="modal_text_col">
+            <p>Tracking</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="row my-3">
+        <div class="col-3">
+          <div class="modal_icon_box">
+            <img src="./assets/coupon.png" />
+          </div>
+        </div>
+        <div class="col-9">
+          <div class="modal_text_col">
+            <p>Coupons</p>
+          </div>
+        </div>
+
+      </div>
+      </a>
+      <a href="./termsConditions.html">
+        <div class="row my-3">
+          <div class="col-3">
+            <div class="modal_icon_box">
+              <img src="./assets/about_us.png" />
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="modal_text_col">
+              <p>About Us</p>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      <a href="./termsConditions.html">
+        <div class="row my-3">
+          <div class="col-3">
+            <div class="modal_icon_box">
+              <img src="./assets/terms.png" />
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="modal_text_col">
+              <p>Terms & Conditions</p>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      <a href="./privacyPolicy.html">
+        <div class="row my-3">
+          <div class="col-3">
+            <div class="modal_icon_box">
+              <img src="./assets/ppolicy.png" />
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="modal_text_col">
+              <p>Privacy Policy</p>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      <a href="./cancellationPolicy.html">
+        <div class="row my-3">
+          <div class="col-3">
+            <div class="modal_icon_box">
+              <img src="./assets/cancellation.png" />
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="modal_text_col">
+              <p>Concellation Policy</p>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      <a href="./cancellationPolicy.html">
+        <div class="row my-3">
+          <div class="col-3">
+            <div class="modal_icon_box">
+              <img src="./assets/refund.png" />
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="modal_text_col">
+              <p>Refund Policy</p>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      <a href="./helpAndSupport.html">
+        <div class="row my-3">
+          <div class="col-3">
+            <div class="modal_icon_box">
+              <img src="./assets/helpsupport.png" />
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="modal_text_col">
+              <p>Help and Support</p>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      <a href="./serviceArea.html">
+        <div class="row my-3">
+          <div class="col-3">
+            <div class="modal_icon_box">
+              <img src="./assets/area.png" />
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="modal_text_col">
+              <p>Service Area</p>
+            </div>
+          </div>
+
+        </div>
+      </a>
+      <a href="./login.html">
+        <div class="row my-3">
+          <div class="col-3">
+            <div class="modal_icon_box">
+              <img src="./assets/logout.png" />
+            </div>
+          </div>
+          <div class="col-9">
+            <div class="modal_text_col">
+              <p>Sign In</p>
+            </div>
+          </div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Get all checkboxes with the class "custom-checkbox"
+    const checkboxes = document.querySelectorAll('.custom-checkbox');
+    // Add event listener to each checkbox
+    checkboxes.forEach(function (checkbox) {
+      checkbox.addEventListener('change', function () {
+        // Uncheck all checkboxes
+        checkboxes.forEach(function (cb) {
+          if (cb !== checkbox) {
+            cb.checked = false;
+          }
+        });
+      });
+    });
+    // Function to log checkbox value (you can modify this function as needed)
+    function logCheckboxValue(checkbox) {
+      console.log(checkbox.value + ' is ' + (checkbox.checked ? 'checked' : 'unchecked'));
+    }
+  </script>
+  <script>
+
+
+    function toggleRadioButton(radioButtonId) {
+      const radioButton = document.getElementById(radioButtonId);
+      radioButton.checked = !radioButton.checked;
+      radioButton.style.display = "block";
+      // Toggle visibility based on the checked state
+      radioButton.style.display = radioButton.checked ? "block" : "none";
+    }
+  </script>
+  <script>
+    let count = 0;
+    // Initially hide decrement button and counter
+    document.getElementById("decrementBtn").style.display = "none";
+    document.getElementById("counter").style.display = "none";
+
+    function increment() {
+      count++;
+      // Show both buttons and counter after the first increment
+      document.getElementById("incrementBtn").style.display = "inline";
+      document.getElementById("decrementBtn").style.display = "inline";
+      document.getElementById("counter").style.display = "inline";
+      updateCounter();
+    }
+
+    function decrement() {
+      count--;
+      // Hide decrement button when the count is 0
+      if (count === 0) {
+        document.getElementById("decrementBtn").style.display = "none";
+      }
+      // Show both buttons and counter when the count is greater than or equal to 1
+      if (count >= 1) {
+        document.getElementById("counter").style.display = "inline";
+      } else {
+        document.getElementById("counter").style.display = "none";
+      }
+      updateCounter();
+    }
+
+    function updateCounter() {
+      document.getElementById("counter").innerText = count;
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Check the initial theme and set the toggle position accordingly
+    themeToggle.checked = body.classList.contains('dark-theme');
+
+    themeToggle.addEventListener('change', () => {
+        if (themeToggle.checked) {
+            body.classList.remove('light-theme');
+            body.classList.add('dark-theme');
+        } else {
+            body.classList.remove('dark-theme');
+            body.classList.add('light-theme');
+        }
+    });
+</script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      // Default parameters
+      slidesPerView: 8,
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+
+      // Responsive breakpoints
+      breakpoints: {
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 8,
+          spaceBetween: 0,
+        },
+      },
+    });
+  </script>
+</body>
+
+</html>

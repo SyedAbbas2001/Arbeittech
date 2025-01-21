@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" />
+    <title>Arbeittech</title>
+    <style>
+      .service_summary_img{
+        overflow: hidden;
+        height: 120px;
+        width: 120px;
+        border-radius: 8px;
+        border: 1px solid rgb(53,108,180);
+      }
+      .service_summary_img img{
+        height: 100%;
+        width: 100%;
+      }
+      .info_head_sec p{
+        margin-bottom: 0px;
+      }
+      .detail_container h6{
+        color: rgb(53,108,180);
+        margin-bottom: 0px;
+      }
+      .detail_container span{
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="./assets/logoarbeitttech.png" class="logo" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/services.html">Service</a>
+              </li>
+              <div class="search_container">
+                <div class="search_container_left">
+                  <i class="mdi mdi-magnify"></i>
+                </div>
+                <div class="search_container_right">
+                  <input type="text" placeholder="Search Services near you" />
+                </div>
+              </div>
+              <a class="nav-link" href="/cart.html" style="all: unset">
+                <span class="position-relative">
+                  <i class="mdi mdi-cart"></i>
+                  <span class="position-absolute top-10 start-4 translate-middle badge rounded-pill bg-danger bb"> 1 </span>
+                </span>
+              </a>
+            </ul>
+            <div class="d-flex">
+              <a href="/login.html">
+                <button class="signin_btn">
+                  <i class="mdi mdi-login"></i>Sign In </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="top_padding"></div>
+      <div class="cart_container">
+        <div class="stepper">
+          <div class="stepper-wrapper">
+            <div class="stepper-item completed active">
+              <div class="step-counter"> 1 <span class="bi bi-bookmark fs-1"></span>
+              </div>
+              <div class="step-name">Booking Details</div>
+            </div>
+            <div class="stepper-item">
+              <div class="step-counter">2</div>
+              <div class="step-name">Payment</div>
+            </div>
+            <div class="stepper-item">
+              <div class="step-counter">3</div>
+              <div class="step-name">Complete</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="service_schedule">
+              <h4>Services Schedule</h4>
+              <div class="date_time">
+                <div class="row">
+                  <div class="col-10" style="display: flex">
+                    <div class="date_div">
+                      <h3>25</h3>
+                      <span>jan, 2024</span>
+                    </div>
+                    <div class="day">
+                      <p>Thursday</p>
+                      <p>05:10 PM</p>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <i class="fas fa-edit pen" type="button" class="btn btn-primary" data-mdb-modal-init data-mdb-target="#exampleModal4"></i>
+                  </div>
+                </div>
+              </div>
+              <h4>Services Address</h4>
+              <div class="date_time">
+                <div class="row">
+                  <div class="col-10" style="display: flex">
+                    <div class="location_div">
+                      <i class="mdi mdi-map-marker location"></i>
+                    </div>
+                    <div class="Address">
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing</p>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <i class="fas fa-edit pen" type="button" class="btn btn-primary" data-mdb-modal-init data-mdb-target="#exampleModal3"></i>
+                  </div>
+                </div>
+              </div>
+              <h4>Provider Information</h4>
+              <div class="providers_card_new" style="padding: 20px 20px 10px 20px">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./assets/jordon1.png" class="providerimg" />
+                  </div>
+                  <div class="col-8" style="display: flex; flex-direction: column">
+                    <h5 style="font-size: 18px; color: black"> Ellison Cardenas </h5>
+                    <p style="line-height: 13px; font-size: 13px"> Lorem ipsum dolor sit amet consectetur </p>
+                    <div class="rating" style="margin-top: -10px">
+                      <ul class="rating_ul">
+                        <li></li>
+                      </ul>
+                      <span style="margin-top: 4px; margin-left: 5px">4.75</span>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <i class="fas fa-edit pen" type="button" class="btn btn-primary" data-mdb-modal-init data-mdb-target="#exampleModal1"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="service_schedule">
+              <h4>Service Summary</h4>
+              <div class="detail_container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <h6>Numbers of bedrooms</h6>
+                    
+                      <span>1: 2 Bedrooms</span>
+                   
+                    <h6>Numbers of bedrooms</h6>
+                    <span>2: 2 Bedrooms</span>
+                   
+                  </div>
+                  <div class="col-md-6">
+                    <h6>Numbers of bedrooms</h6>
+                    <span>4: 2 Bedrooms</span>
+                    <h6>Numbers of bedrooms</h6>
+                    <span>3: 2 Bedrooms</span>
+                    
+                  </div>
+
+                </div>
+                <br/>
+                 <div class="row"> 
+                 <div class="col-md-4">
+                  <div class="service_summary_img">
+                    <img src="./assets/sofacleaning.png"/>
+                  </div>
+                    
+                 </div>
+                 <div class="col-md-4">
+                  <div class="service_summary_img">
+                    <img src="./assets/sofacleaning.png"/>
+                  </div>
+                    
+                 </div>
+                 </div>
+                 <div class="row">
+                  <h5 class="my-3">Discription</h5>
+                   <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, obcaecati...</span>
+                 </div>
+              </div>
+              <br/>
+              <h4>Cart Summary</h4>
+              <div class="detail_container">
+                <div class="info_header_div info_head_sec">
+                  <div class="info_header_div_first">
+                    <h5>Rent Ambulance</h5>
+                    <p>emergency-ambulance</p>
+                  </div>
+                  <div class="info_header_div_Second" style="text-align: left">
+                    <span>X3</span>
+                  </div>
+                  <div class="info_header_div_third text_right">
+                    <p>9,000,00$</p>
+                  </div>
+                </div>
+                <div class="row my-3 info_head_sec">
+                  <div class="col-6">
+                    <p>Sub Total</p>
+                  </div>
+                  <div class="col-6 text_right">
+                    <p>9,000,00$</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Discount</p>
+                  </div>
+                  <div class="col-6 text_right">
+                    <p>9,000,00$</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Campaign Discount</p>
+                  </div>
+                  <div class="col-6 text_right">
+                    <p>9,000,00$</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Coupon Discount</p>
+                  </div>
+                  <div class="col-6 text_right">
+                    <p>9,000,00$</p>
+                  </div>
+                  <div class="col-6">
+                    <p>VAT</p>
+                  </div>
+                  <div class="col-6 text_right">
+                    <p>9,000,00$</p>
+                  </div>
+                  <div class="col-6">
+                    <p>Service fee</p>
+                  </div>
+                  <div class="col-6 text_right">
+                    <p>9,000,00$</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <h5>Grand Total</h5>
+                  </div>
+                  <div class="col-6 text_right">
+                    <p>9,000,00$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="agree">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                <label for="vehicle1" class="price"> I agree with the <b>term and conditions</b>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <h4 class="total_price_heading"> Total Price: <span style="color: rgb(231, 78, 85)">9,171.00$</span>
+        </h4>
+        <div class="btn_container my-3">
+          <a href="/payment.html" style="all: unset; width: 100%">
+            <button type="button" class="add_to_cart" data-mdb-ripple-init> Proceed to checkout </button>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Address</h5>
+        <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="col-md-12 col-sm-12 px-md-3">
+          <p style="margin-bottom: 0px; font-size: 18px">Label As</p>
+          <div class="radio_tabs my-3">
+            <input type="radio" name="radioGroup" class="radio-button" id="button1" onclick="handleRadioClick('button1')" />
+            <label for="button1" class="radio-label">
+              <i class="mdi mdi-home"></i>&nbsp;Home </label>
+            <input type="radio" name="radioGroup" class="radio-button" id="button2" onclick="handleRadioClick('button2')" />
+            <label for="button2" class="radio-label">
+              <i class="mdi mdi-desk"></i> Office </label>
+            <input type="radio" name="radioGroup" class="radio-button" id="button3" onclick="handleRadioClick('button3')" />
+            <label for="button3" class="radio-label">
+              <i class="mdi mdi-map-marker"></i> Others </label>
+          </div>
+          <label for="html">Service Address <span class="star">*</span>
+          </label>
+          <input type="text" id="html" class="contact_input mb-3" placeholder="" />
+          <div class="row">
+            <div class="col-md-6">
+              <label for="html">House </label>
+              <input type="text" id="html" class="contact_input mb-3" placeholder="" />
+            </div>
+            <div class="col-md-6">
+              <label for="html">Floor</label>
+              <input type="text" id="html" class="contact_input" placeholder="" />
+            </div>
+            <div class="col-md-6">
+              <label for="html">City</label>
+              <input type="text" id="html" class="contact_input mb-3" placeholder="" />
+            </div>
+            <div class="col-md-6">
+              <label for="html">Country</label>
+              <input type="text" id="html" class="contact_input" placeholder="" />
+            </div>
+            <div class="col-md-6">
+              <label for="html">Zip code</label>
+              <input type="text" id="html" class="contact_input" placeholder="" />
+            </div>
+            <div class="col-md-6">
+              <label for="html">Street</label>
+              <input type="text" id="html" class="contact_input" placeholder="" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer"> 
+        <button type="button" class="btn btn-primary" data-mdb-ripple-init data-mdb-dismiss="modal">Save  </button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+      <div class="modal-dialog" style="border-radius: 25px !important">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"></h5>
+            <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal_head">
+              <img src="./assets/providermodal.png" class="providerimg" />
+              <h4>Available Providers</h4>
+              <p>3 Variations available</p>
+            </div>
+            <div class="modal_container">
+              <div class="provider_div">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./assets/providermodal.png" class="providerimg" />
+                  </div>
+                  <div class="col-10">
+                    <h5>Let Arbeittech choose for you</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="providers_card_new" id="myDiv" onclick="toggleRadioButton('radioButton1')">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./assets/providermodal.png" class="providerimg" />
+                  </div>
+                  <div class="col-9" style="display: flex; flex-direction: column">
+                    <h5>Ellison Cardenas</h5>
+                    <div class="rating">
+                      <ul class="rating_ul">
+                        <li></li>
+                      </ul>
+                      <span style="margin-top: 4px; margin-left: 5px">4.75</span>
+                    </div>
+                  </div>
+                  <div class="col-1">
+                    <input type="radio" id="radioButton1" name="myRadioGroup" class="radioButton" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="confirm_btn" type="button" class="btn btn-secondary" data-mdb-ripple-init data-mdb-dismiss="modal"> Confirm </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal_info_div_head">
+              <h4>Please select an address</h4>
+              <p>Where you want to take the service</p>
+            </div>
+            <div class="modal_info_div">
+              <div>
+                <img src="./assets/locationnew.png" />
+                <p> You don't have a saved address in your current zone. Please add new address or use your current location </p>
+              </div>
+              <div class="modal-footer">
+                
+                  <button class="confirm_btn"  type="button"  data-mdb-ripple-init data-mdb-modal-init data-mdb-target="#exampleModal" style="padding: 5px 20px">
+                    <i class="mdi mdi-map-marker location" style="color: #fff"></i>Add New Address </button>
+          
+                <button class="current_location_btn" data-mdb-ripple-init>
+                  <i class="mdi mdi-map-marker"></i> Use My Current Location </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel4" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="border-bottom: none">
+            <button type="button" class="btn-close" data-mdb-ripple-init data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="date_timeModal">
+              <label for="date_time">Select Date & Time:</label>
+              <input type="datetime-local" id="date_time" name="date_time" />
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-mdb-ripple-init data-mdb-dismiss="modal"> Save </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h2>Arbeitech</h2>
+            <p class="text-justify"> ArbeitTech, a versatile service provider, caters to a diverse range of essential needs, offering a comprehensive array of services such as plumbing, carpentry, electrical assistance, car repair, and more. With a commitment to excellence, ArbeitTech has positioned itself as a reliable solution for individuals seeking skilled professionals in various trades. </p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="http://scanfcode.com/category/c-language/">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/front-end-development/">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/back-end-development/">About US</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/java-programming-language/">Contact US</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/sitemap/">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="http://scanfcode.com/about/">About Us</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/contact/">Contact Us</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text"> Copyright &copy; 2017 All Rights Reserved by <a href="#">Arbeittech</a>. </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a class="twitter" href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dribbble" href="#">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </li>
+              <li>
+                <a class="linkedin" href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleRadioButton(radioButtonId) {
+        const radioButton = document.getElementById(radioButtonId);
+        radioButton.checked = !radioButton.checked;
+        radioButton.style.display = "block";
+        // Toggle visibility based on the checked state
+        radioButton.style.display = radioButton.checked ? "block" : "none";
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+  </body>
+</html>

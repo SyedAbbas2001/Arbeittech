@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css" />
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.js"></script>
+    <title>Arbeittech</title>
+    <style>
+     
+      
+
+      
+
+    
+
+      .login {
+        min-width: 530px !important;
+      }
+
+      .label-float {
+        margin-top: 15px;
+        position: relative;
+        padding-top: 13px;
+      }
+
+      .label-float input {
+        border: none;
+        border-bottom: 1px solid rgb(62, 120, 196);
+        border-radius: 5px;
+        outline: none;
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 16px;
+        transition: all 0.1s linear;
+        -webkit-transition: all 0.1s linear;
+        -moz-transition: all 0.1s linear;
+        -webkit-appearance: none;
+      }
+
+      .label-float input:focus {
+        border: none;
+        border-bottom: 1px solid rgb(62, 120, 196);
+      }
+
+      .label-float input::placeholder {
+        color: transparent;
+      }
+
+      .label-float label {
+        pointer-events: none;
+        position: absolute;
+        top: calc(50% - 8px);
+        left: 15px;
+        transition: all 0.1s linear;
+        -webkit-transition: all 0.1s linear;
+        -moz-transition: all 0.1s linear;
+        background-color: white;
+        padding: 3px 5px 5px;
+        box-sizing: border-box;
+      }
+
+      .label-float input:required:invalid+label:before {
+        content: "*";
+      }
+
+      .label-float input:focus+label,
+      .label-float input:not(:placeholder-shown)+label {
+        font-size: 13px;
+        top: 0;
+        color: rgb(62, 120, 196);
+      }
+
+      .contact_input_new {
+        border: none;
+        border-bottom: 1px solid rgb(62, 120, 196);
+        border-radius: 5px !important;
+      }
+
+      .min:focus {
+        outline: none;
+      }
+ 
+      .container_signup {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 20px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+   
+      .container_signup input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+ 
+    
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="./assets/logoarbeitttech.png" class="logo" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/services.html">Service</a>
+              </li>
+              <div class="search_container">
+                <div class="search_container_left">
+                  <i class="mdi mdi-magnify"></i>
+                </div>
+                <div class="search_container_right">
+                  <input type="text" placeholder="Search Services near you" />
+                </div>
+              </div>
+              <a class="nav-link" href="/cart.html" style="all: unset">
+                <span class="position-relative">
+                  <i class="mdi mdi-cart"></i>
+                  <span class="position-absolute top-10 start-4 translate-middle badge rounded-pill bg-danger bb"> 1 </span>
+                </span>
+              </a>
+            </ul>
+            <div class="d-flex">
+                <button class="signin_btn">
+                  <i class="mdi mdi-login"></i>Sign In </button>
+            </div>
+
+          
+          </div>
+        </div>
+      </nav>
+      <div class="top_padding"></div>
+      <div class="cart_container login_container">
+        <img src="./assets/logoarbeitttech.png" class="my-3" />
+        <div>
+          <div>
+            <div class="profile_cont">
+               
+                <label for="fileInput" class="drop-area">
+                  <img
+                    id="preview_img"
+                    class="h-16 w-16 object-cover rounded-full"
+                    src="./assets/uploaderimg.png"
+                    alt="Current profile photo"
+                  />
+                  <input
+                    type="file"
+                    id="fileInput"
+                    accept="image/*"
+                    onchange="loadFile(event)"
+                  />
+                  <button id="changeImageButton" onclick="openFileUploader()">
+                    <i class="fas fa-pencil-alt"></i>
+                  </button>
+                </label> 
+                <h5>Company Profile</h5>
+              </div>
+            <div iv class="" style="max-width: 800px;">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <div class="my-3">
+                    <div class="label-float">
+                      <input type="text" placeholder="" />
+                      <label> Business Name <span class="star">*</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6  col-sm-12">
+                  <div class="my-3">
+                    <div class="label-float">
+                      <input type="text" placeholder=" " />
+                      <label>First Name <span class="star">*</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6  col-sm-12">
+                  <div class="my-3">
+                    <div class="label-float">
+                      <input type="text" placeholder=" " />
+                      <label>Last Name <span class="star">*</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6  col-sm-12">
+                  <div class="my-3">
+                    <div class="my-3">
+                      <div class="label-float">
+                        <input type="text" placeholder=" " />
+                        <label>Street Address<span class="star">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6  col-sm-12">
+                  <div class="my-3">
+                    <div class="label-float">
+                      <input type="email" placeholder=" " />
+                      <label>Email Address <span class="star">*</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6  col-sm-12">
+                  <div class="my-3">
+                    <div class="label-float">
+                      <input type="number" placeholder=" " />
+                      <label>Zip Code <span class="star">*</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+               
+                <div class="col-md-6  col-sm-12">
+                    <div class="my-3">
+                      <div class="label-float">
+                        <input type="number" placeholder=" " />
+                        <label>Apt,Ste,bldg (Optional)<span class="star">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div> 
+                  <div class="col-md-6  col-sm-12">
+                    <div class="my-3">
+                      <div class="label-float">
+                        <input type="number" placeholder=" " />
+                        <label>State<span class="star">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6  col-sm-12">
+                    <div class="my-3">
+                      <div class="label-float">
+                        <input type="password" placeholder=" " />
+                        <label>Password<span class="star">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6  col-sm-12">
+                    <div class="my-3">
+                      <div class="label-float">
+                        <input type="password" placeholder=" " />
+                        <label>Confirm Password<span class="star">*</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6  col-sm-12">
+                    <div class="my-5 ">
+                      <div class="  custominp  ">
+                        <div class="contact_input_new">
+                          <input name="phone" type="text" id="phone" class="min  " />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+           
+              <div class="row">
+                <div class="col my-3">
+                  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+                  <label for="vehicle1" class="price"> I agree with the <b>Terms & Conditions</b>
+                  </label>
+                </div>
+                
+              </div>
+              <div class="btn_container my-5">
+                  <button type="button" class="add_to_cart" data-mdb-ripple-init> Sign In </button>
+                  
+              </div>
+              <p class="text-center">Already have an account?<span style="color: rgb(28, 112, 208); font-weight: 500;"> Sign Up</span></p>
+            </div>
+            </p>
+          </div>
+        </div>
+       
+        <div class="divider"></div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h2>Arbeitech</h2>
+            <p class="text-justify"> ArbeitTech, a versatile service provider, caters to a diverse range of essential needs, offering a comprehensive array of services such as plumbing, carpentry, electrical assistance, car repair, and more. With a commitment to excellence, ArbeitTech has positioned itself as a reliable solution for individuals seeking skilled professionals in various trades. </p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="http://scanfcode.com/category/c-language/">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/front-end-development/">Terms & Conditions</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/back-end-development/">About US</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/java-programming-language/">Contact US</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/sitemap/">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="http://scanfcode.com/about/">About Us</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/contact/">Contact Us</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/contribute-at-scanfcode/">Contribute</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text"> Copyright &copy; 2017 All Rights Reserved by <a href="#">Arbeittech</a>. </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a class="twitter" href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dribbble" href="#">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </li>
+              <li>
+                <a class="linkedin" href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+ 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+          separateDialCode: true,
+        });
+      });
+    </script>
+     <script>
+        function loadFile(event) {
+          var input = event.target;
+          var file = input.files[0];
+          var type = file.type;
+          var output = document.getElementById("preview_img");
+  
+          output.src = URL.createObjectURL(event.target.files[0]);
+          output.onload = function () {
+            URL.revokeObjectURL(output.src); // free memory
+          };
+        }
+  
+        function openFileUploader() {
+          var fileInput = document.getElementById("fileInput");
+          fileInput.click();
+        }
+      
+       
+      </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"></script>
+  </body>
+</html>

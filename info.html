@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css"
+    />
+    <title>Arbeittech</title>
+   <style>
+    .container_radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ 
+/* Hide the browser's default radio button */
+.container_radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+ 
+  
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 20px; /* Decreased height */
+  width: 20px; /* Decreased width */
+  background-color: #eee;
+  border-radius: 50%; /* Make it round */
+
+}
+
+/* On mouse-over, add a grey background color */
+.container_radio:hover input ~ .checkmark {
+  background-color: #ccc;
+  
+}
+
+/* When the radio button is checked, add a blue background */
+.container_radio input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Style the checkmark/indicator */
+.container_radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container_radio .checkmark:after {
+  left: 6px; /* Adjusted position */
+  top: 6px; /* Adjusted position */
+  width: 9px; /* Adjusted size */
+  height: 9px; /* Adjusted size */
+  border-radius: 50%;
+  background-color: white;
+}
+
+   </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="./assets/logoarbeitttech.png" class="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon">
+              <i class="fas fa-bars"></i>
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="/index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/services.html">Service</a>
+              </li>
+              <div class="search_container">
+                <div class="search_container_left">
+                  <i class="mdi mdi-magnify"></i>
+                </div>
+                <div class="search_container_right">
+                  <input type="text" placeholder="Search Services near you" />
+                </div>
+              </div>
+              <a class="nav-link" href="/cart.html" style="all: unset">
+                <span class="position-relative">
+                  <i class="mdi mdi-cart"></i>
+                  <span
+                    class="position-absolute top-10 start-4 translate-middle badge rounded-pill bg-danger bb"
+                  >
+                    1
+                  </span>
+                </span>
+              </a>
+            </ul>
+            <div class="d-flex">
+              <a href="/login.html">
+                <button class="signin_btn">
+                  <i class="mdi mdi-login"></i>Sign In
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="top_padding"></div>
+      <div class="info_banner">
+        <img src="./assets/sofaclean.jpg" />
+      </div>
+      
+      <div class="banner_card">
+         <div class="banner_grid">
+          <div class="banner_grid_1">
+            <div class="info_card">
+              <span class="info_card_discount ">
+                <span>100$ OFF</span>
+              </span>
+              <img
+                src="./assets/sofacleaning.png"
+               class="banner_card_img"
+              />
+              
+            </div>
+          </div>
+          <div class="banner_grid_2">
+            <div class="rating">
+              <ul class="rating_ul">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                0.00
+              </ul>
+            
+            </div>
+            <p>We all are well-equipped and well-prepared to privide instant sofa cleaning service</p>
+          </div>
+          <div class="banner_grid_3 text-right">
+            <p class="cut" style="margin-bottom: -5px;">
+              <del>3,000.00$</del>
+            </p>
+            <p class="price">2,900.00$</p>
+
+            <button
+            class="plusBtn"
+            type="button"
+            data-mdb-modal-init
+            data-mdb-target="#exampleModal"
+          >
+            ADD+
+          </button>
+          </div>
+
+         </div>
+      </div>
+      <div class="cart_container">
+        <div class="empty" style="display: none">
+          <img src="./assets/empty.png" />
+          <p>Your cart is empty!</p>
+        </div>
+        <div class="tab">
+          <button class="tablinks active" onclick="openTab(event, 'Tab1')">Service Overview</button>
+          <button class="tablinks" onclick="openTab(event, 'Tab2')">FAQ's</button>
+          <button class="tablinks" onclick="openTab(event, 'Tab3')">Reviews</button>
+        </div>
+        
+        <div id="Tab1" class="tabcontent" style="display:block;">
+          <div>
+            <div class="my-3">
+              <h4>Overview Of Common Space cleaning    </h4>
+          
+            </div>
+          
+            
+            <div class="row">
+                <div class="col-md-3">
+                  <h5 class="my-3">Numbers of bedrooms</h5>
+                  <label class="container_radio">1 bedroom
+                    <input type="radio" name="radio" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">2 bedrooms
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">3 bedrooms
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">4 bedrooms
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">5 bedrooms
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-md-3">
+                  <h5 class="my-3">Cleaning type</h5>
+                  <label class="container_radio">Standard cleaning
+                    <input type="radio" name="radio" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">Deep cleaning
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">Move out cleaning
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                </div>
+                <div class="col-md-3">
+                  <h5 class="my-3">Numbers of bedrooms</h5>
+                  <label class="container_radio">1 bedroom
+                    <input type="radio" name="radio" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">2 bedrooms
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">3 bedrooms
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">4 bedrooms
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">5 bedrooms
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="col-md-3">
+                  <h5 class="my-3">Pets</h5>
+                  <label class="container_radio">Pets in home
+                    <input type="radio" name="radio" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="container_radio">No pets in home
+                    <input type="radio" name="radio">
+                    <span class="checkmark"></span>
+                  </label>
+                  
+                   
+                </div>
+              
+            </div>
+            <br/>
+            <div class="row">
+              <h5>What kind of issue do you have?</h5>
+              <div class="col-md-3">
+                <div class="profile_cont">
+               
+                  <label for="fileInput" class="drop-area">
+                    <img
+                      id="preview_img"
+                      class="h-16 w-16 object-cover rounded-full"
+                      src="./assets/uploaderimg.png"
+                      alt="Current profile photo"
+                    />
+                    <input
+                      type="file"
+                      id="fileInput"
+                      accept="image/*"
+                      onchange="loadFile(event)"
+                    />
+                    <button id="changeImageButton" onclick="openFileUploader()">
+                      <i class="fas fa-pencil-alt"></i>
+                    </button>
+                  </label>
+                  <p>
+                    Image format - jpg png jpeg gif Image Size - maximum size 2 MB
+                    Image Ratio - 1:1
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="profile_cont">
+                 
+                  <label for="fileInput" class="drop-area">
+                    <img
+                      id="preview_img"
+                      class="h-16 w-16 object-cover rounded-full"
+                      src="./assets/uploaderimg.png"
+                      alt="Current profile photo"
+                    />
+                    <input
+                      type="file"
+                      id="fileInput"
+                      accept="image/*"
+                      onchange="loadFile(event)"
+                    />
+                    <button id="changeImageButton" onclick="openFileUploader()">
+                      <i class="fas fa-pencil-alt"></i>
+                    </button>
+                  </label>
+                  <p>
+                    Image format - jpg png jpeg gif Image Size - maximum size 2 MB
+                    Image Ratio - 1:1
+                  </p>
+                </div>
+              </div>
+
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Description</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Write Description" rows="3"></textarea>
+            </div>
+            <div class="next_btn_cont">
+              <button type="button" class="btn btn-primary">Next</button>
+            </div>
+          </div>
+        </div>
+        
+        <div id="Tab2" class="tabcontent">
+          <div class="accordion-container">
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <span class="icon">+</span>
+               <p>When will the waiting charge available</p> 
+              
+              </div>
+              <div class="accordion-content">Content for Accordion 2</div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header" onclick="toggleAccordion(this)">
+                  <span class="icon">+</span>
+               <p>When will the waiting charge available</p> 
+              
+              </div>
+              <div class="accordion-content">Content for Accordion 2</div>
+            </div>
+      
+            <!-- Repeat the above structure for additional accordions -->
+          </div>
+        </div>
+        
+        <div id="Tab3" class="tabcontent">
+         <div style="display: flex;align-items: center;justify-content: center;">
+          <img src="./assets/reviewno.png"/>
+         </div>
+        </div>
+      
+        <div class="divider"></div>
+      </div>
+    </div>
+    <!-- ------ -->
+    <div
+      class="modal fade"
+      id="exampleModal1"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" style="border-radius: 25px !important">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-mdb-ripple-init
+              data-mdb-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal_head">
+              <img src="./assets/providermodal.png" class="providerimg" />
+              <h4>Available Providers</h4>
+              <p>3 Variations available</p>
+            </div>
+            <div class="modal_container">
+              <div class="provider_div">
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./assets/providermodal.png" class="providerimg" />
+                  </div>
+                  <div class="col-10">
+                    <h5>Let Arbeittech choose for you</h5>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="providers_card_new"
+                id="myDiv"
+                onclick="toggleRadioButton('radioButton1')"
+              >
+                <div class="row">
+                  <div class="col-2">
+                    <img src="./assets/providermodal.png" class="providerimg" />
+                  </div>
+                  <div
+                    class="col-9"
+                    style="display: flex; flex-direction: column"
+                  >
+                    <h5>Ellison Cardenas</h5>
+                    <div class="rating">
+                      <ul class="rating_ul">
+                        <li></li>
+                      </ul>
+                      <span style="margin-top: 4px; margin-left: 5px"
+                        >4.75</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-1">
+                    <input
+                      type="radio"
+                      id="radioButton1"
+                      name="myRadioGroup"
+                      class="radioButton"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="confirm_btn"
+              data-mdb-ripple-init
+              data-mdb-dismiss="modal"
+            >
+              Confirm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-mdb-ripple-init
+              data-mdb-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="modal_head">
+              <img src="./assets/sofacleaning.png" />
+              <h4>Sofa Cleaning</h4>
+              <p>2 Variations available</p>
+            </div>
+            <div class="modal_container">
+              <div class="container_card">
+                <div class="container_card_left">
+                  <p style="color: black">Full sofa cleaning service</p>
+                  <p class="price">299.00$</p>
+                </div>
+                <div class="container_card_right">
+                  <button
+                    id="decrementBtn"
+                    class="counter_btn"
+                    onclick="decrement()"
+                  >
+                    -
+                  </button>
+                  <p id="counter" class="counter_value">0</p>
+                  <button
+                    id="incrementBtn"
+                    class="counter_btn"
+                    onclick="increment()"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+              <div class="container_card">
+                <div class="container_card_left">
+                  <p style="color: black">Full sofa cleaning service</p>
+                  <p class="price">299.00$</p>
+                </div>
+                <div class="container_card_right">
+                  <button
+                    id="decrementBtn"
+                    class="counter_btn"
+                    onclick="decrement()"
+                  >
+                    -
+                  </button>
+                  <p id="counter" class="counter_value">0</p>
+                  <button
+                    id="incrementBtn"
+                    class="counter_btn"
+                    onclick="increment()"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <!-- <button
+                type="button"
+                class="btn btn-secondary"
+                data-mdb-ripple-init
+                data-mdb-dismiss="modal"
+              >
+                Close
+              </button> -->
+            <div class="btn_container">
+              <button
+                class="provider_btn"
+                type="button"
+                data-mdb-ripple-init
+                data-mdb-modal-init
+                data-mdb-target="#exampleModal1"
+              >
+                <img src="./assets/provider.png" />
+              </button>
+              <button
+                type="button"
+                class="add_to_cart"
+                data-mdb-ripple-init
+                data-mdb-dismiss="modal"
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------- -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h2>Arbeitech</h2>
+            <p class="text-justify">
+              ArbeitTech, a versatile service provider, caters to a diverse
+              range of essential needs, offering a comprehensive array of
+              services such as plumbing, carpentry, electrical assistance, car
+              repair, and more. With a commitment to excellence, ArbeitTech has
+              positioned itself as a reliable solution for individuals seeking
+              skilled professionals in various trades.
+            </p>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Categories</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="http://scanfcode.com/category/c-language/"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/front-end-development/"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/category/back-end-development/"
+                  >About US</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://scanfcode.com/category/java-programming-language/"
+                  >Contact US</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/sitemap/">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+              <li>
+                <a href="http://scanfcode.com/about/">About Us</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/contact/">Contact Us</a>
+              </li>
+              <li>
+                <a href="http://scanfcode.com/contribute-at-scanfcode/"
+                  >Contribute</a
+                >
+              </li>
+              <li>
+                <a href="http://scanfcode.com/privacy-policy/"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">
+              Copyright &copy; 2017 All Rights Reserved by
+              <a href="#">Arbeittech</a>.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li>
+                <a class="facebook" href="#">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a class="twitter" href="#">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </li>
+              <li>
+                <a class="dribbble" href="#">
+                  <i class="fab fa-dribbble"></i>
+                </a>
+              </li>
+              <li>
+                <a class="linkedin" href="#">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      let count = 0;
+      // Initially hide decrement button and counter
+      document.getElementById("decrementBtn").style.display = "none";
+      document.getElementById("counter").style.display = "none";
+
+      function increment() {
+        count++;
+        // Show both buttons and counter after the first increment
+        document.getElementById("incrementBtn").style.display = "inline";
+        document.getElementById("decrementBtn").style.display = "inline";
+        document.getElementById("counter").style.display = "inline";
+        updateCounter();
+      }
+
+      function decrement() {
+        count--;
+        // Hide decrement button when the count is 0
+        if (count === 0) {
+          document.getElementById("decrementBtn").style.display = "none";
+        }
+        // Show both buttons and counter when the count is greater than or equal to 1
+        if (count >= 1) {
+          document.getElementById("counter").style.display = "inline";
+        } else {
+          document.getElementById("counter").style.display = "none";
+        }
+        updateCounter();
+      }
+
+      function updateCounter() {
+        document.getElementById("counter").innerText = count;
+      }
+    </script>
+     <script>
+      function toggleAccordion(accordionHeader) {
+        // Close all accordions
+        var allAccordions = document.querySelectorAll(".accordion-item");
+        allAccordions.forEach(function (accordion) {
+          if (accordion !== accordionHeader.parentElement) {
+            accordion.classList.remove("active");
+            var content = accordion.querySelector(".accordion-content");
+            content.style.maxHeight = "0";
+            accordion.querySelector(".icon").innerText = "+";
+          }
+        });
+
+        // Toggle the active class for the clicked accordion
+        accordionHeader.parentElement.classList.toggle("active");
+
+        // Toggle the display of the accordion content
+        var content = accordionHeader.nextElementSibling;
+        if (content.style.maxHeight === "1000px") {
+          content.style.maxHeight = "0";
+          accordionHeader.querySelector(".icon").innerText = "+";
+        } else {
+          content.style.maxHeight = "1000px"; // Adjust this value based on your content height
+          accordionHeader.querySelector(".icon").innerText = "-";
+        }
+      }
+    </script>
+    <script>
+      function toggleRadioButton(radioButtonId) {
+        const radioButton = document.getElementById(radioButtonId);
+        radioButton.checked = !radioButton.checked;
+        radioButton.style.display = "block";
+        // Toggle visibility based on the checked state
+        radioButton.style.display = radioButton.checked ? "block" : "none";
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.1.0/mdb.umd.min.js"
+    ></script>
+    <script>
+      // Function to switch between tabs
+      function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    
+      // Set the first tab as active by default
+      document.getElementsByClassName("tablinks")[0].click();
+    </script>
+      <script>
+        function loadFile(event) {
+          var input = event.target;
+          var file = input.files[0];
+          var type = file.type;
+          var output = document.getElementById("preview_img");
+  
+          output.src = URL.createObjectURL(event.target.files[0]);
+          output.onload = function () {
+            URL.revokeObjectURL(output.src); // free memory
+          };
+        }
+  
+        function openFileUploader() {
+          var fileInput = document.getElementById("fileInput");
+          fileInput.click();
+        }
+        /*  Make elements easier to reference later */
+        const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = document.getElementById("confirm-password");
+      const passwordIcon = document.getElementById("password-icon");
+      const confirmPasswordIcon = document.getElementById("confirm-password-icon");
+  
+      let isShowPassword = false;
+  
+      const on = (el, event, cb) => el.addEventListener(event, cb);
+  
+      const togglePasswordVisibility = (input, icon) => {
+        isShowPassword = !isShowPassword;
+        if (isShowPassword) {
+          input.setAttribute("type", "text");
+          icon.innerHTML = "visibility";
+        } else {
+          input.setAttribute("type", "password");
+          icon.innerHTML = "visibility_off";
+        }
+      };
+  
+      on(passwordIcon, "click", () => {
+        togglePasswordVisibility(passwordInput, passwordIcon);
+      });
+  
+      on(confirmPasswordIcon, "click", () => {
+        togglePasswordVisibility(confirmPasswordInput, confirmPasswordIcon);
+      });
+      </script>
+  </body>
+</html>
